@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
@@ -57,8 +60,39 @@ public class SudokuSolver implements ISodukoSolver {
 
     @Override
     public boolean checkSudoku(int[][] rawSudoks) {
-        // implement this method
-        return false; // delete this line!
+        for(int i = 0;i<rawSudoks.length;i++)
+        {
+            Set<Integer> set = new TreeSet<Integer>();
+            Set<Integer> set2 = new TreeSet<Integer>();
+            for(int x = 0;x<rawSudoks.length;x++)
+            {
+            
+                 set.add(rawSudoks[x][i]);
+                 set2.add(rawSudoks[i][x]);
+            
+            
+            
+            
+            }
+            
+             
+            if(set.size()!=9)
+            {
+               return false;
+              
+            }
+                System.out.println("Size1 : "+set.size());
+               
+                
+            
+            
+          
+        
+        
+        
+        }
+        
+        return true;
     }
 
     @Override
