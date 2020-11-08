@@ -89,7 +89,7 @@ public class SudokuSolverTest {
         writeSudokuToFile(sudokuTestFile);
         SudokuSolver testSolver = new SudokuSolver();
         
-        int[][] actualValue = testSolver.readSudoku(sudokuTestFile);
+        int[][] actualValue = testSolver.readSudoku("test_sudoku.csv");
         sudokuTestFile.delete();
         
         assertTrue(matricesEqual(STUDENT_SUDOKU_WITH_ONLY_ONE_SOLUTION, actualValue));

@@ -8,7 +8,7 @@ package net.htlgrieskirchen.pos3.sudoku;
 import java.io.File;
 
 public interface ISodukoSolver {
-    int[][] readSudoku(File file);
+    int[][] readSudoku(String filename);
     
     boolean checkSudoku(int[][] rawSudoku);
     
